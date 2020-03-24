@@ -13,8 +13,8 @@ const connection = mysql.createConnection({
 connection.connect();
 
 app.get("/", (req, res) => {
-  connection.query("SELECT * FROM `token`", (err, res, fields) => {
-    res.send(`Error: ${err}, res: ${res}, fields: ${fields}`);
+  connection.query("SELECT * FROM `token`", (err, response, fields) => {
+    res.send(response);
   });
 });
 
